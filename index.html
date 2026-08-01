@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location Check-in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <div class="eyebrow"><span class="dot"></span>ATTENDANCE · LOCATION CHECK-IN</div>
+  <h1>Where are you<br>right now?</h1>
+  <p class="sub">Apna naam likhein aur button dabayein. Aapka browser location ki permission maangega — sirf allow karne par hi location share hogi.</p>
+
+  <div class="card">
+    <label for="nameInput">Aapka naam</label>
+    <input type="text" id="nameInput" placeholder="Jaise: Ayesha Khan" autocomplete="name">
+
+    <div class="pin-stage">
+      <div class="radar" id="radar"></div>
+      <svg class="pin" id="pinIcon" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2C7.58 2 4 5.58 4 10c0 5.25 6.72 11.16 7.01 11.41.28.24.7.24.98 0C12.28 21.16 19 15.25 19 10c0-4.42-3.58-8-8-8zm0 10.8a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6z" fill="#E8871E"/>
+      </svg>
+    </div>
+    <div class="status-line" id="statusLine">Location share karne ke liye taiyar</div>
+
+    <button class="btn btn-primary" id="shareBtn">Meri Location Share Karein</button>
+
+    <div class="result" id="resultBox">
+      <div class="r-title" id="resultTitle"></div>
+      <div class="r-body" id="resultBody"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
